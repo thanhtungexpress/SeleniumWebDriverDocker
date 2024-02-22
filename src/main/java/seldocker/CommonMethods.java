@@ -12,8 +12,11 @@ public class CommonMethods {
 	{
 		try {
             String path = System.getProperty("user.dir");
+            //ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "cd \"" + path + "\" && " + command);
+			
 			ProcessBuilder builder = new ProcessBuilder(
-				"sh", "-c", "cd \"" + path + "\" && " + command);
+						"sh", "-c", "cd \"" + path + "\" && " + command);
+
             builder.redirectErrorStream(true);
             Process p = builder.start();
             System.out.println("builder successful");

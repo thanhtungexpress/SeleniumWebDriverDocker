@@ -4,6 +4,16 @@ pipeline {
     maven '3.9.6'
     }
     stages {
+        stage('Build and Start Containers') {
+            steps {
+                script {
+                    // Move to the directory containing your docker-compose.yml file
+                    checkout scm
+                        // Run docker-compose up
+                        sh 'docker-compose up -d'
+                }
+            }
+        }
         stage('Build and Test') {
             steps {
                 script {
