@@ -10,43 +10,16 @@ pipeline {
                     // Clone your Selenium project from Git
                     checkout scm
                     // Maven build and test
-                    sh 'mvn clean test'
+                    //sh 'mvn clean test'
                 }
             }
         }
-
-        stage('Docker Compose') {
-            steps {
-                script {
-                    // Run Docker Compose
-                    docker-compose up -d
-                }
-            }
-        }
-
         stage('Run Selenium Tests') {
             steps {
                 script {
                     // Run Selenium tests using TestNG
                     sh 'mvn test'
                 }
-            }
-        }
-
-        stage('Stop Docker Compose') {
-            steps {
-                script {
-                    // Stop Docker Compose
-                    docker-compose down
-                }
-            }
-        }
-    }
-     post {
-        always {
-            // Clean up, for example, remove Docker containers
-            script {
-                docker-compose down
             }
         }
     }
