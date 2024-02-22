@@ -12,10 +12,9 @@ public class CommonMethods {
 	{
 		try {
             String path = System.getProperty("user.dir");
-            //ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "cd \"" + path + "\" && " + command);
+            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "cd \"" + path + "\" && " + command);
 			
-			ProcessBuilder builder = new ProcessBuilder(
-						"sh", "-c", "cd \"" + path + "\" && " + command);
+			//ProcessBuilder builder = new ProcessBuilder("sh", "-c", "cd \"" + path + "\" && " + command);
 
             builder.redirectErrorStream(true);
             Process p = builder.start();
@@ -24,13 +23,12 @@ public class CommonMethods {
             String line;
             while (true) {
                 line = r.readLine();
-                if (line == null) {
-                    break; // exit the loop if there are no more lines
-                }
-                if (line.contains(logText)) {
-                    System.out.println(line);
-                    break;
-                }
+                if (line != null) {
+					if (line.contains(logText)) {
+						System.out.println(line);
+						break;
+					}
+				}
             }
         } catch (Exception e) {
             e.printStackTrace();

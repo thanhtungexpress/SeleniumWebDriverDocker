@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="4.194" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="24.005" tests="7" errors="0" skipped="5" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
@@ -60,6 +60,47 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="getTitle" classname="seldocker.GridTest" time="0.022"/>
-  <testcase name="getTitle" classname="seldocker.GridTest" time="0.013"/>
+  <testcase name="setup" classname="seldocker.GridTest" time="23.887">
+    <failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;TUNGTRUONG&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUNGTRUONG', ip: '192.168.1.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at seldocker.GridTest.setup(GridTest.java:48)
+Caused by: java.net.ConnectException: Failed to connect to /127.0.0.1:4444
+	at seldocker.GridTest.setup(GridTest.java:48)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at seldocker.GridTest.setup(GridTest.java:48)
+</failure>
+    <system-out><![CDATA[builder successful
+]]></system-out>
+  </testcase>
+  <testcase name="setup" classname="seldocker.GridTest" time="23.887">
+    <failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;TUNGTRUONG&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TUNGTRUONG', ip: '192.168.1.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at seldocker.GridTest.setup(GridTest.java:43)
+Caused by: java.net.ConnectException: Failed to connect to /127.0.0.1:4444
+	at seldocker.GridTest.setup(GridTest.java:43)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at seldocker.GridTest.setup(GridTest.java:43)
+</failure>
+  </testcase>
+  <testcase name="getTitle" classname="seldocker.GridTest" time="0">
+    <skipped message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;TUNGTRUONG&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: driver.version: RemoteWebDriver"/>
+  </testcase>
+  <testcase name="getTitle" classname="seldocker.GridTest" time="0">
+    <skipped message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;TUNGTRUONG&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: driver.version: RemoteWebDriver"/>
+  </testcase>
+  <testcase name="tearDown" classname="seldocker.GridTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="seldocker.GridTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="stopContainer" classname="seldocker.GridTest" time="0">
+    <skipped/>
+  </testcase>
 </testsuite>
