@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Run Docker Compose
-                    sh 'docker-compose up -d'
+                    docker-compose up -d
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     // Stop Docker Compose
-                    sh 'docker-compose down'
+                    docker-compose down
                 }
             }
         }
@@ -46,7 +46,7 @@ pipeline {
         always {
             // Clean up, for example, remove Docker containers
             script {
-                sh 'docker-compose down'
+                docker-compose down
             }
         }
     }
